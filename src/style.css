@@ -74,6 +74,29 @@ body {
   }
 
 /* Navbar ENDS here */
+
+  .search-container {
+    margin: 2.5rem 0 0 2.7rem;
+    width: 350px;
+    height: 50px;
+    box-shadow: 4px 4px 7px 0 rgba(128, 128, 128, 0.801);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .search-country-input {
+    border: none;
+    font-size: 15px;
+  }
+
+  .search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+  }
+
   .countries ul {
     justify-content: space-around;
     gap: 2rem;
