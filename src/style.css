@@ -55,6 +55,25 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  
+/* Navbar starts here */
+
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.801);
+  }
+
+  .dark-mode-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 20px;
+  }
+
+/* Navbar ENDS here */
   .countries ul {
     justify-content: space-around;
     gap: 2rem;
