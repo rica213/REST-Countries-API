@@ -27,10 +27,12 @@ const getDomelements = () => {
   return countryOfficial;
 };
 
-// -- 2.a Function that makes the first letter of a string UpperCase.
+// -- 2.a Function that makes the first letter of a string to UpperCase.
 const convertInput = (str) => {
-  const strConverted = str.charAt(0).toUpperCase() + str.slice(1);
-  return strConverted;
+  const words = str.split(' ');
+  const convertedWords = words.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
+  const convertedString = convertedWords.join(' ');
+  return convertedString;
 };
 
 // -- 1.b Add event to extract every input while user is writing.
