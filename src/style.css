@@ -73,6 +73,17 @@ body {
   box-shadow: 0 1px 5px 2px gainsboro;
 }
 
+.found {
+  display: block;
+  position:absolute;
+  top: 230px;
+  left: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
 .flag {
   width: 100%;
   border-radius: 10px 10px 0 0;

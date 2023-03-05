@@ -1,6 +1,8 @@
+import { getDomelements } from "./search";
 const displayCountries = (countries, container) => {
   countries.forEach((country) => {
     const li = document.createElement('li');
+    li.classList.add('country-card');
     li.innerHTML = `
       <img src="${country.flags.png}" alt="${country.flags.alt}" class="flag">
       <div class="desc">
@@ -12,6 +14,7 @@ const displayCountries = (countries, container) => {
     `;
     container.appendChild(li);
   });
+  getDomelements();
 };
 
 export default displayCountries;
