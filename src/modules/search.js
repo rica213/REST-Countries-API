@@ -1,16 +1,7 @@
 const formSearch = document.querySelector('.search-country-form');
 const inputSearch = document.querySelector('.search-country-input');
-
-
-export const getDomelements = () =>{
-  const countryOfficial = document.querySelectorAll('.official-name');
-  return countryOfficial;
-}
-
-const convertInput = (str) => {
-  const strConverted =  str.charAt(0).toUpperCase() + str.slice(1);
-  return strConverted
-}
+// -- 3. Displays all the countries which name matches the input that the user is writing
+// with preference the closest name.
 const displaySearched = (countryInput, countriesDom) => {
   const countries = Array.from(countriesDom);
   countries.forEach((country) => {
@@ -18,7 +9,7 @@ const displaySearched = (countryInput, countriesDom) => {
     let score = 0;
     if (countryOfficial.includes(countryInput)) {
       score = countryOfficial.split(countryInput).join('').length;
-      country.parentElement.parentElement.style.display = "block";
+      country.parentElement.parentElement.style.display = 'block';
     } else {
       country.parentElement.parentElement.classList.add('hidden');
     }
@@ -29,19 +20,33 @@ const displaySearched = (countryInput, countriesDom) => {
   countries.forEach((country) => {
     countriesContainer.appendChild(country.parentElement.parentElement);
   });
-}
+};
+// -- 2.b Function that takes the all the Dom countries.
+const getDomelements = () => {
+  const countryOfficial = document.querySelectorAll('.official-name');
+  return countryOfficial;
+};
 
+// -- 2.a Function that makes the first letter of a string UpperCase.
+const convertInput = (str) => {
+  const strConverted = str.charAt(0).toUpperCase() + str.slice(1);
+  return strConverted;
+};
 
+// -- 1.b Add event to extract every input while user is writing.
 inputSearch.addEventListener('input', (e) => {
   const countryInput = convertInput(e.target.value);
   const countriesDom = getDomelements();
   displaySearched(countryInput, countriesDom);
 });
 
+// -- 1.a Add event to submit the form to extract the input when finish.
 formSearch.addEventListener('submit', (e) => {
-  e.preventDefault()
+  e.preventDefault();
   const countryInput = convertInput(inputSearch.value);
   const countriesDom = getDomelements();
   displaySearched(countryInput, countriesDom);
   formSearch.reset();
 });
+
+export default getDomelements;

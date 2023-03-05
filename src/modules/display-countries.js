@@ -1,4 +1,5 @@
-import { getDomelements } from "./search";
+import getDomelements from './search.js';
+
 const displayCountries = (countries, container) => {
   countries.forEach((country) => {
     const li = document.createElement('li');

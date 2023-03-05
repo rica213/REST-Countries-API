@@ -14,6 +14,7 @@ html {
 body {
   font-family: 'Nunito Sans', sans-serif;
 }
+
 /* Navbar starts here */
 
 .navbar-nav {
@@ -57,7 +58,8 @@ body {
   cursor: pointer;
   padding-left: 20px;
 }
- /* Search country ends here */
+
+/* Search country ends here */
 
 .countries ul {
   display: flex;
@@ -75,7 +77,7 @@ body {
 
 .found {
   display: block;
-  position:absolute;
+  position: absolute;
   top: 230px;
   left: 60px;
 }
@@ -112,42 +114,43 @@ body {
 @media screen and (min-width: 768px) {
   /* Navbar starts here */
 
-.navbar-nav {
-  padding: 40px;
-}
+  .navbar-nav {
+    padding: 40px;
+  }
 
-.dark-mode-btn {
-  cursor: pointer;
-  font-size: 15px;
-  margin-right: 20px;
-}
+  .dark-mode-btn {
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 20px;
+  }
 
-/* Navbar ENDS here */
+  /* Navbar ENDS here */
 
-/* Search country starts here */
-.search-container {
-  margin: 2.5rem 0 0 2.7rem;
-  width: 350px;
-  height: 50px;
-  box-shadow: 4px 4px 7px 0 rgba(128, 128, 128, 0.801);
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-}
+  /* Search country starts here */
+  .search-container {
+    margin: 2.5rem 0 0 2.7rem;
+    width: 350px;
+    height: 50px;
+    box-shadow: 4px 4px 7px 0 rgba(128, 128, 128, 0.801);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
 
-.search-country-input {
-  border: none;
-  font-size: 15px;
-  width: 290px;
-}
+  .search-country-input {
+    border: none;
+    font-size: 15px;
+    width: 290px;
+  }
 
-.search-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding-left: 20px;
-}
- /* Search country ends here */
+  .search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+  }
+
+  /* Search country ends here */
   .countries ul {
     justify-content: space-around;
     gap: 2rem;
