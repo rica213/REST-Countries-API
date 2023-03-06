@@ -1,11 +1,16 @@
 const formSearch = document.querySelector('.search-country-form');
 const inputSearch = document.querySelector('.search-country-input');
+
+// --* convert every accent or symbol from the name of countries
+function toNormalForm(str) {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
 // -- 3. Displays all the countries which name matches the input that the user is writing
 // with preference the closest name.
 const displaySearched = (countryInput, countriesDom) => {
   const countries = Array.from(countriesDom);
   countries.forEach((country) => {
-    const countryOfficial = country.textContent;
+    const countryOfficial = toNormalForm(country.textContent);
     let score = 0;
     if (countryOfficial.includes(countryInput)) {
       score = countryOfficial.split(countryInput).join('').length;
@@ -29,7 +34,7 @@ const getDomElements = () => {
 
 // -- 2.a Function that makes the first letter of a string to UpperCase.
 const convertInput = (str) => {
-  const words = str.split(' ');
+  const words = str.toLowerCase().split(' ');
   const convertedWords = words.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
   const convertedString = convertedWords.join(' ');
   return convertedString;
