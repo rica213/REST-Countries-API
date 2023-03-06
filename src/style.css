@@ -15,6 +15,52 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+/* Navbar starts here */
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 15px;
+  gap: 20px;
+  height: 60px;
+  box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.801);
+}
+
+.dark-mode-btn {
+  background: none;
+  border: none;
+  font-size: 12px;
+}
+
+/* Navbar ENDS here */
+
+/* Search country starts here */
+.search-container {
+  margin: 2.5rem 0 2.4rem 2.4rem;
+  width: 260px;
+  height: 50px;
+  box-shadow: 4px 4px 7px 0 rgba(128, 128, 128, 0.801);
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.search-country-input {
+  border: none;
+  font-size: 15px;
+  width: 290px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+/* Search country ends here */
+
 .countries ul {
   display: flex;
   flex-wrap: wrap;
@@ -27,6 +73,17 @@ body {
   width: 75%;
   border-radius: 10px;
   box-shadow: 0 1px 5px 2px gainsboro;
+}
+
+.found {
+  display: block;
+  position: absolute;
+  top: 230px;
+  left: 60px;
+}
+
+.hidden {
+  display: none;
 }
 
 .flag {
@@ -55,6 +112,46 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  /* Navbar starts here */
+
+  .navbar-nav {
+    padding: 40px;
+  }
+
+  .dark-mode-btn {
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 20px;
+  }
+
+  /* Navbar ENDS here */
+
+  /* Search country starts here */
+  .search-container {
+    margin: 2.5rem 0 0 2.7rem;
+    width: 350px;
+    height: 50px;
+    box-shadow: 4px 4px 7px 0 rgba(128, 128, 128, 0.801);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .search-country-input {
+    border: none;
+    font-size: 15px;
+    width: 290px;
+    padding-left: 20px;
+  }
+
+  .search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+  }
+
+  /* Search country ends here */
   .countries ul {
     justify-content: space-around;
     gap: 2rem;
