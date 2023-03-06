@@ -1,4 +1,4 @@
-import getDomelements from './search.js';
+import getDomElements from './search.js';
 
 const displayCountries = (countries, container) => {
   countries.forEach((country) => {
@@ -15,7 +15,7 @@ const displayCountries = (countries, container) => {
     `;
     container.appendChild(li);
   });
-  getDomelements();
+  getDomElements();
 };
 
 export default displayCountries;

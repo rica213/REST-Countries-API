@@ -141,6 +141,7 @@ body {
     border: none;
     font-size: 15px;
     width: 290px;
+    padding-left: 20px;
   }
 
   .search-btn {

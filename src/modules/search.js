@@ -16,13 +16,13 @@ const displaySearched = (countryInput, countriesDom) => {
     country.dataset.score = score;
   });
   countries.sort((a, b) => b.dataset.score - a.dataset.score);
-  const countriesContainer = document.querySelector('.countries-container');
+  const countriesContainer = document.querySelector('.countries ul');
   countries.forEach((country) => {
     countriesContainer.appendChild(country.parentElement.parentElement);
   });
 };
 // -- 2.b Function that takes the all the Dom countries.
-const getDomelements = () => {
+const getDomElements = () => {
   const countryOfficial = document.querySelectorAll('.official-name');
   return countryOfficial;
 };
@@ -38,7 +38,7 @@ const convertInput = (str) => {
 // -- 1.b Add event to extract every input while user is writing.
 inputSearch.addEventListener('input', (e) => {
   const countryInput = convertInput(e.target.value);
-  const countriesDom = getDomelements();
+  const countriesDom = getDomElements();
   displaySearched(countryInput, countriesDom);
 });
 
@@ -46,9 +46,9 @@ inputSearch.addEventListener('input', (e) => {
 formSearch.addEventListener('submit', (e) => {
   e.preventDefault();
   const countryInput = convertInput(inputSearch.value);
-  const countriesDom = getDomelements();
+  const countriesDom = getDomElements();
   displaySearched(countryInput, countriesDom);
   formSearch.reset();
 });
 
-export default getDomelements;
+export default getDomElements;
