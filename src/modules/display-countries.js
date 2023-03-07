@@ -1,3 +1,4 @@
+import countryDetails from "./country-details";
 const displayCountries = (countries, container) => {
   countries.forEach((country) => {
     const li = document.createElement('li');
@@ -11,7 +12,9 @@ const displayCountries = (countries, container) => {
       </div>
     `;
     container.appendChild(li);
+    
   });
+  countryDetails();
 };
 
 export default displayCountries;
