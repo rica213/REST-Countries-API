@@ -5,7 +5,7 @@ import retrieve from "./retrieve.js";
 const result = retrieve(url);
 
 const detailsSection = document.querySelector(".detailed-country");
-const contriesSection = document.querySelector(".countries");
+const countriesSection = document.querySelector(".countries");
 
 const createDetails = (officialName) => {
   result.then((country) => {
@@ -13,6 +13,17 @@ const createDetails = (officialName) => {
       let html = "";
       if(country.name.official === officialName) {
         console.log(country);
+  
+        const nativeName = ()=> {
+          const values = Object.values(country.name.nativeName)
+          values.forEach((native)=> {
+            const nativeCommon = native.common;
+            console.log(nativeCommon)
+           return nativeCommon;
+          })
+          }
+        
+     
          html += `
           <button class="back-btn">Back</button>
           <div class="details-container-country">
@@ -20,7 +31,7 @@ const createDetails = (officialName) => {
             <div class="country-full-details">
                <h2 class="official-name-det">${country.name.official}</h2>
                <div class="country-details-text">
-                   <p class="details-text"><span>Native Name: </span></p>
+                   <p class="details-text"><span>Native Name: </span>${Object.values(country.name.nativeName).map(native => native.common)}</p>
                    <p class="details-text"><span>Population: </span>${
                      country.population
                    }</p>
@@ -38,9 +49,10 @@ const createDetails = (officialName) => {
                    }</p>
                    <p class="details-text"><span>Currencies: </span>${Object.values(
                      country.currencies
-                   )}</p>
+                   ).map(coin=>coin.name)}</p>
                    <p class="details-text"><span>Languages: </span>${Object.values(
-                     country.languages)}</p>
+                     country.languages
+                   )}</p>
   </div>
   <div class="border-countries"></div>
   </.>
@@ -55,7 +67,7 @@ const countryDetails = () => {
   const card = document.querySelectorAll(".countries li");
   card.forEach((country) => {
     country.addEventListener("click", () => {
-      contriesSection.style.display = "none";
+      countriesSection.style.display = "none";
       detailsSection.style.display = "block";
       const officialName = country.querySelector('.official-name').textContent;
       createDetails(officialName);
