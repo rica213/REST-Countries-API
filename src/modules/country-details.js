@@ -15,7 +15,8 @@ function createDetails(country) {
   }">
       <div class="country-full-details">
         <h2 class="official-name-det">${country.name.official}</h2>
-        <div class="country-details-text">
+        <div class="all-details">
+         <div class="country-details-text">
           <p class="details-text"><span>Native Name: </span>${nativeName(
             country
           )}</p>
@@ -29,6 +30,7 @@ function createDetails(country) {
           <p class="details-text"><span>Capital: </span>${
             country.capital[0]
           }</p>
+          </div>
           <div class= "other-det">
           <p class="details-text"><span>Top Level Domain: </span>${
             country.tld

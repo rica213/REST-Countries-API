@@ -54,3 +54,56 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+
+span {
+  font-weight: 600;
+}
+
+@media only screen and (min-width:768px) {
+
+  .flag-detailed {
+  width: 90%;
+}
+
+.country-full-details {
+  width: 90%;
+}
+
+@media only screen and (min-width:1000px) {
+
+.back-btn {
+  height: 40px;
+  width: 140px;
+  margin: 40px auto auto 80px;
+  border-radius: 5px;
+}
+
+.details-container-country {
+  margin: 80px auto auto 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap:120px;
+}
+
+  .flag-detailed {
+  width: 80%;
+  height: auto;
+}
+
+.country-full-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+}
+.all-details {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 130px;
+  font-size: 15px;
+}
+}
+
+}
