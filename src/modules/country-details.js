@@ -1,15 +1,18 @@
 import url from "./url.js";
 import retrieve from "./retrieve.js";
-
+import './details.css'
+// -- Global variables
 const result = retrieve(url);
 const detailsSection = document.querySelector(".detailed-country");
 const countriesSection = document.querySelector(".countries");
-
+//-- Render details of the country.
 function createDetails(country) {
   let html = `
     <button class="back-btn">Back</button>
     <div class="details-container-country">
-      <img src="${country.flags.png}" alt="${country.flags.alt}">
+      <img class="flag-detailed" src="${country.flags.png}" alt="${
+    country.flags.alt
+  }">
       <div class="country-full-details">
         <h2 class="official-name-det">${country.name.official}</h2>
         <div class="country-details-text">
@@ -26,6 +29,7 @@ function createDetails(country) {
           <p class="details-text"><span>Capital: </span>${
             country.capital[0]
           }</p>
+          <div class= "other-det">
           <p class="details-text"><span>Top Level Domain: </span>${
             country.tld
           }</p>
@@ -36,19 +40,20 @@ function createDetails(country) {
             country.languages
           )}</p>
         </div>
+        </div>
         <div class="border-countries"></div>
       </div>
     </div>
   `;
   detailsSection.innerHTML = html;
 }
-
+//-- function to take the native name from the data received from the api (since is in a super nested object)
 function nativeName(country) {
   return Object.values(country.name.nativeName)
     .map((native) => native.common)
     .join(", ");
 }
-
+//--Event listener that opens details page when user click in each card.
 function countryDetails() {
   const card = document.querySelectorAll(".countries li");
   card.forEach((country) => {
