@@ -15,6 +15,11 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.dark-mode {
+  background-color: rgba(34, 34, 37, 0.98);
+  color: rgb(255, 255, 255);
+}
+
 .countries ul {
   display: flex;
   flex-wrap: wrap;

@@ -2,7 +2,7 @@ import './style.css';
 import url from './modules/url.js';
 import retrieve from './modules/retrieve.js';
 import displayCountries from './modules/display-countries.js';
-
+import './modules/dark-mode.js'
 const container = document.querySelector('.countries ul');
 const result = retrieve(url);
 
