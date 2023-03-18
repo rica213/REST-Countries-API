@@ -180,3 +180,13 @@ body {
     font-size: 0.75rem;
   }
 }
+
+/* Filter begin */
+.region-select {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.1em;
+}
+
+/* Filter end */
