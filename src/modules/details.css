@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-size: calc(15px + 0.390625vw);
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  box-shadow: 1px 1px 3px 2px rgba(134, 134, 134, 0.2);
+  height: 30px;
+  width: 100px;
+  margin: 35px auto auto 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+}
+
+.details-container-country {
+  margin: 60px auto auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.flag-detailed {
+  width: 94%;
+}
+
+.country-full-details {
+  text-align: left;
+  width: 94%;
+}
+
+.country-details-text {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.other-det {
+  margin: 20px auto 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+span {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+  .flag-detailed {
+    width: 80%;
+  }
+
+  .country-full-details {
+    width: 80%;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .back-btn {
+      height: 40px;
+      width: 130px;
+      margin: 40px auto auto 80px;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    .arrow {
+      margin-right: 10px;
+    }
+
+    .details-container-country {
+      margin: 80px auto auto 80px;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      gap: 120px;
+    }
+
+    .flag-detailed {
+      width: 80%;
+      height: auto;
+    }
+
+    .country-full-details {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .all-details {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      gap: 130px;
+      font-size: 15px;
+    }
+  }
+}
