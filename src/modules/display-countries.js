@@ -1,3 +1,5 @@
+
+import countryDetails from './country-details.js';
 import getDomElements from './search.js';
 
 const displayCountries = (countries, container) => {
@@ -15,6 +17,7 @@ const displayCountries = (countries, container) => {
     `;
     container.appendChild(li);
   });
+  countryDetails();
   getDomElements();
 };
 
