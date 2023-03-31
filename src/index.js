@@ -16,5 +16,12 @@ window.addEventListener('load', () => {
 /* Filter by region */
 filterInput.addEventListener('change', (e) => {
   const region = e.target.value;
-  filterByRegion(result, region, container);
+  if (region === 'all') {
+    container.innerHTML = '';
+    result.then((countries) => {
+      displayCountries(countries, container);
+    });
+  } else {
+    filterByRegion(result, region, container);
+  }
 });
