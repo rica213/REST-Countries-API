@@ -1,4 +1,3 @@
-
 import countryDetails from './country-details.js';
 import getDomElements from './search.js';
 
