@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .back-btn {
@@ -64,6 +64,29 @@ body {
 
 span {
   font-weight: 600;
+}
+
+.borders-container {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 4rem;
+  align-items: flex-start;
+}
+
+.border-countries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.border-name {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.75rem;
+  border: 1px solid lightgray;
+  padding: 0.1rem 0.75rem;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {

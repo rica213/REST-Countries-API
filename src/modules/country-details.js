@@ -86,7 +86,10 @@ function createDetails(country) {
   )}</p>
         </div>
         </div>
-        <ul class="border-countries"></ul>
+        <div class="borders-container">
+          <span>Borders: </span>
+          <ul class="border-countries"></ul>
+        </div>
       </div>
     </div>
   `;
