@@ -1,3 +1,5 @@
+import url from './url.js';
+
 const retrieve = async (requestURL) => {
   const request = new Request(requestURL);
   const response = await fetch(request);
@@ -5,4 +7,5 @@ const retrieve = async (requestURL) => {
   return json;
 };
 
-export default retrieve;
+const result = retrieve(url);
+export default result;
