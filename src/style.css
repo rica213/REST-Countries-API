@@ -95,6 +95,7 @@ body {
 
 .dark-mode .search-country-input {
   background-color: #222d37;
+  color: white;
 }
 
 .dark-mode .search-country-input::placeholder {
