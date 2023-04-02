@@ -31,12 +31,24 @@ body {
   box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.801);
 }
 
+ .dark-mode  .navbar-nav{
+  background-color: rgba(44, 55, 67, 0.89);
+}
+
 .dark-mode-btn {
   background: none;
   border: none;
   font-size: 12px;
 }
 
+.dark-mode .dark-mode-btn {
+  color: white;
+}
+
+.dark-mode {
+  background-color: #222D37;
+  color: rgb(255, 255, 255);
+}
 /* Navbar ENDS here */
 
 /* Search + Filter starts here */
@@ -48,6 +60,10 @@ body {
   align-items: center;
   margin: 1.5rem;
   gap: 1rem;
+}
+
+.dark-mode .region-select {
+  color: white;
 }
 
 @media screen and (min-width: 768px) {
@@ -78,6 +94,18 @@ body {
   border: none;
   font-size: 15px;
   width: 290px;
+}
+
+.dark-mode .search-country-input {
+  background-color: #222D37;
+}
+
+.dark-mode .search-country-input::placeholder {
+ color: white;
+}
+
+.dark-mode .search-btn {
+  color: white;
 }
 
 .search-btn {
@@ -117,6 +145,11 @@ body {
   box-shadow: 0 1px 5px 2px gainsboro;
 }
 
+.dark-mode .countries li {
+  box-shadow: none;
+  background-color: rgba(44, 55, 67, 0.89);
+}
+
 .found {
   display: block;
   position: absolute;
@@ -136,6 +169,7 @@ body {
 .desc {
   padding: 2rem;
 }
+
 
 .official-name {
   font-weight: 800;

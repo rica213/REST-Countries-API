@@ -30,6 +30,11 @@ body {
   border-radius: 4px;
 }
 
+.dark-mode .back-btn {
+  background-color: #2D3843;
+  color: white;
+}
+
 .details-container-country {
   margin: 60px auto auto auto;
   display: flex;
@@ -87,6 +92,11 @@ span {
   padding: 0.1rem 0.75rem;
   border-radius: 3px;
   cursor: pointer;
+}
+.dark-mode .border-name {
+  color: white;
+  border: none;
+  background-color:#2D3843 ;
 }
 
 @media only screen and (min-width: 768px) {
