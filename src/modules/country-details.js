@@ -1,8 +1,7 @@
-import url from './url.js';
-import retrieve from './retrieve.js';
 import './details.css';
+import result from './retrieve.js';
+
 // -- Global variables
-const result = retrieve(url);
 const detailsSection = document.querySelector('.detailed-country');
 const countriesSection = document.querySelector('.countries');
 
@@ -19,6 +18,33 @@ function nativeName(country) {
     .map((native) => native.common)
     .join(', ');
 }
+
+// -- get name of a country based on the cca3
+function getNameBorder(data, cca3) {
+  return data.then((countries) => {
+    const targetCountry = countries.filter(
+      (country) => country.cca3.toLowerCase() === cca3.toLowerCase(),
+    );
+    const borderName = targetCountry[0].name.common;
+    return borderName;
+  });
+}
+
+// -- get border(s) of a country
+function displayBorders(country) {
+  const { borders } = country;
+  const bordersCountries = document.querySelector('.border-countries');
+  if (borders) {
+    borders.forEach((border) => {
+      const li = document.createElement('li');
+      getNameBorder(result, border).then((borderName) => {
+        li.innerHTML = `<a href="#" class="border-name">${borderName}</a>`;
+      });
+      bordersCountries.appendChild(li);
+    });
+  }
+}
+
 // -- Render details of the country.
 function createDetails(country) {
   const html = `
@@ -33,7 +59,7 @@ function createDetails(country) {
       <div class="country-full-details">
         <h2 class="official-name-det">${country.name.official}</h2>
         <div class="all-details">
-         <div class="country-details-text">
+          <div class="country-details-text">
           <p class="details-text"><span>Native Name: </span>${nativeName(
     country,
   )}</p>
@@ -60,12 +86,16 @@ function createDetails(country) {
   )}</p>
         </div>
         </div>
-        <div class="border-countries"></div>
+        <div class="borders-container">
+          <span>Borders: </span>
+          <ul class="border-countries"></ul>
+        </div>
       </div>
     </div>
   `;
   detailsSection.innerHTML = html;
   backButton();
+  displayBorders(country);
 }
 // --Event listener that opens details page when user click in each card.
 function countryDetails() {

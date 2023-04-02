@@ -15,6 +15,10 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.detailed-country {
+  margin-bottom: 3rem;
+}
+
 /* Navbar starts here */
 
 .navbar-nav {
