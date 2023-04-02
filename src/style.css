@@ -102,6 +102,11 @@ body {
   color: white;
 }
 
+.dark-mode option {
+  background-color: #222d37;
+  color: white;
+}
+
 .search-btn {
   background: none;
   border: none;

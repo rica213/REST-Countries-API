@@ -15,6 +15,10 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
+select option {
+  color: #8f3030;
+}
+
 .back-btn {
   background: none;
   border: none;
@@ -32,6 +36,11 @@ body {
 
 .dark-mode .back-btn {
   background-color: #2d3843;
+  color: white;
+}
+
+.dark-mode .region-select {
+  background-color: #222d37;
   color: white;
 }
 
