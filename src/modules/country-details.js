@@ -4,13 +4,18 @@ import result from './retrieve.js';
 // -- Global variables
 const detailsSection = document.querySelector('.detailed-country');
 const countriesSection = document.querySelector('.countries');
+const searchFilterContainer = document.querySelector(
+  '.search-filter-container',
+);
 
 const backButton = () => {
   document.querySelector('.back-btn').addEventListener('click', () => {
     countriesSection.style.display = 'block';
+    searchFilterContainer.style.display = 'flex';
     detailsSection.style.display = 'none';
   });
 };
+
 // -- function to take the native name from the data received from the api
 // (since is in a super nested object)
 function nativeName(country) {
@@ -38,7 +43,16 @@ function displayBorders(country) {
     borders.forEach((border) => {
       const li = document.createElement('li');
       getNameBorder(result, border).then((borderName) => {
-        li.innerHTML = `<a href="#" class="border-name">${borderName}</a>`;
+        li.innerHTML = `<p class="border-name">${borderName}</p>`;
+        li.addEventListener('click', () => {
+          result.then((countries) => {
+            const borderCountry = countries.find(
+              (country) => country.name.common === borderName,
+            );
+            /* eslint-disable no-use-before-define */
+            createDetails(borderCountry);
+          });
+        });
       });
       bordersCountries.appendChild(li);
     });
@@ -97,6 +111,7 @@ function createDetails(country) {
   backButton();
   displayBorders(country);
 }
+
 // --Event listener that opens details page when user click in each card.
 function countryDetails() {
   const card = document.querySelectorAll('.countries li');
@@ -104,6 +119,7 @@ function countryDetails() {
     country.addEventListener('click', () => {
       countriesSection.style.display = 'none';
       detailsSection.style.display = 'block';
+      searchFilterContainer.style.display = 'none';
       const officialName = country.querySelector('.official-name').textContent;
       result.then((countries) => {
         const country = countries.find(
