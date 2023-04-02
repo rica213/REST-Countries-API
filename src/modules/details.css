@@ -15,6 +15,10 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
+select option {
+  color: #8f3030;
+}
+
 .back-btn {
   background: none;
   border: none;
@@ -28,6 +32,16 @@ body {
   align-items: center;
   gap: 10px;
   border-radius: 4px;
+}
+
+.dark-mode .back-btn {
+  background-color: #2d3843;
+  color: white;
+}
+
+.dark-mode .region-select {
+  background-color: #222d37;
+  color: white;
 }
 
 .details-container-country {
@@ -87,6 +101,12 @@ span {
   padding: 0.1rem 0.75rem;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.dark-mode .border-name {
+  color: white;
+  border: none;
+  background-color: #2d3843;
 }
 
 @media only screen and (min-width: 768px) {
