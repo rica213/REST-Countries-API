@@ -31,7 +31,7 @@ body {
 }
 
 .dark-mode .back-btn {
-  background-color: #2D3843;
+  background-color: #2d3843;
   color: white;
 }
 
@@ -93,10 +93,11 @@ span {
   border-radius: 3px;
   cursor: pointer;
 }
+
 .dark-mode .border-name {
   color: white;
   border: none;
-  background-color:#2D3843 ;
+  background-color: #2d3843;
 }
 
 @media only screen and (min-width: 768px) {
