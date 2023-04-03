@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST-Countries API | by Andrea and Larissa</title>
+    <script
+      src="https://kit.fontawesome.com/713945395b.js"
+      crossorigin="anonymous"
+    ></script>
+  <script defer src="main.js"></script></head>
+  <body>
+    <nav class="navbar-nav">
+      <h3 class="navbar-title">Where in the world?</h3>
+      <button class="dark-mode-btn">
+        <i class="fa-regular fa-moon"></i>
+        Dark Mode
+      </button>
+    </nav>
+    <main>
+      <section class="search-filter-container">
+        <form class="search-country-form">
+          <div class="search-container">
+            <button type="button" class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input
+              type="text"
+              class="search-country-input"
+              placeholder="Search for a country..."
+            />
+          </div>
+        </form>
+        <select name="regions" class="region-select">
+          <option value="all">--- Filter by region ---</option>
+          <option value="africa">Africa</option>
+          <option value="americas">America</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europe</option>
+          <option value="oceania">Oceania</option>
+        </select>
+      </section>
+      <section class="countries">
+        <ul></ul>
+      </section>
+      <section class="detailed-country"></section>
+    </main>
+  </body>
+</html>
