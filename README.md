@@ -33,13 +33,20 @@ In this project, the challenge is integrating with the [REST Countries API](http
 
 HTML, CSS, JavaScript
 
+### Development Tools and Concepts
+- API
+- Linters
+- Webpack
+- Gitflow
 <!-- Features -->
 
 ## Key Features <a name="key-features"></a>
-- **[Use linters]**
-- **[Use webpack]**
-- **[Use Gitflow]**
-- **[See all countries from the API on the homepage]**
+- **User can see all countries from the API on the homepage**
+- **User can search for a country using an input field**
+- **User can filter countries by region**
+- **User can click on a country to see more detailed information on a separate page**
+- **User can click through to the border countries on the detail page**
+- **User can toggle the color scheme between light and dark mode**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -47,15 +54,17 @@ HTML, CSS, JavaScript
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo](https://rica213.github.io/REST-Countries-API/dist/)
+[Live Demo](https://rica213.github.io/REST-Countries-API/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-Clone this repository into your chosen directory in your machine and you are go to go:
-<code>git clone git@github.com:rica213/REST-Countries-API.git</code>
+Clone this repository into your chosen directory in your machine:
+```
+git clone git@github.com:rica213/REST-Countries-API.git
+```
 
 ### Prerequisites
 - Web Browser
@@ -64,28 +73,28 @@ Clone this repository into your chosen directory in your machine and you are go 
 
 ### Setup
 Move into the directory where you cloned the project.
-<code>
+```
 cd REST-Countries-API
-</code>
+```
 
 ### Install
 Next, you can install this project by running the following code:
-<code>
+```
 npm install
-</code>
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Usage
 To run this project, you need to execute the following command in your terminal:
-<code>
+```
 npm run start
-</code>
+```
 
 ### Run tests
 To run tests, you need to execute the following command in your terminal:
-<code>
+```
 npm test
-</code>
+```
 
 <!-- AUTHORS -->
 ## 👥 Authors <a name="authors"></a>
@@ -102,12 +111,9 @@ npm test
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
-- **[Search for a country using an input field]**
-- **[Filter countries by region]**
-- **[Click on a country to see more detailed information on a separate page]**
-- **[Click through to the border countries on the detail page]**
-- **[Toggle the color scheme between light and dark mode]**
+- Write unit tests for all existing methods
 
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
