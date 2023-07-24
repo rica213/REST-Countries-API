@@ -241,6 +241,7 @@ body {
 
   .countries li {
     width: 20%;
+    cursor: pointer;
   }
 
   .flag {
